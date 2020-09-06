@@ -1,0 +1,9 @@
+;
+; A simple boot sector that prints a message to the screen using a BIOS routine.; 
+;
+
+loop: ; Define a label, "loop", that will allow us to jump back into it 4EVER.
+jump loop 
+times 510-($-$$) db 0  
+dw 0xaa55 ;Last two bytes (one word) form the magic number so BIOS knows
+		; That we have to loop forever. 

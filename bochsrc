@@ -1,0 +1,9 @@
+
+ata0-master: type=disk,cylinders=615, heads =6, spt = 17
+floppya : 1_44=boot.asm, status =inserted
+boot: a
+plugin_ctrl: unmapped=0, e1000=1 # unload 'unmapped' and load 'e1000'
+
+
+cpu: count =4, ips=10000000, reset_on_triple_fault=1, cpuid_limit_winnt=1
+

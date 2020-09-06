@@ -1,0 +1,11 @@
+#include /usr/lib/bochs/plugins
+ata0-master: type=disk, path="30M.sample",cylinders=615, heads =6, spt = 17
+floppya : 1_44=boot.bin, status =inserted
+boot: a
+plugin_ctrl: unmapped=0, e1000=1 # unload 'unmapped' and load 'e1000'
+config_interface : win32config
+
+display_library:carbon
+
+cpu: count =2, ips=10000000, reset_on_triple_fault=1, cpuid_limit_winnt=1
+
